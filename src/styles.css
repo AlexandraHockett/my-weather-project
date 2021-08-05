@@ -1,0 +1,98 @@
+body {
+  font-family: "Source Sans Pro", sans-serif;
+}
+video {
+  position: fixed;
+  z-index: -1;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  margin: 20;
+  font-style: bold;
+}
+
+h2 {
+  position: relative;
+  top: -20px;
+  display: inline-block;
+  font-size: 4rem;
+  margin: 0;
+}
+
+button {
+  font-size: small;
+  background: violet;
+  color: white;
+  border: none;
+}
+
+.weatherapp {
+  display: block;
+  margin: 0 auto;
+  padding: 30px;
+  background: rgb(163, 166, 182);
+  opacity: 0.9;
+  border-radius: 30px;
+}
+
+.info {
+  display: inline;
+}
+
+.infocolumn {
+  display: inline-block;
+  width: 20px;
+}
+.citySearch {
+  font-size: 20px;
+  text-align: center;
+}
+
+.search {
+  background: grey;
+  color: white;
+  font-size: 12px;
+  padding: 7px 9px;
+  border: none;
+  border-radius: 10px;
+}
+.feels {
+  display: inline-block;
+  position: relative;
+  right: -40px;
+  top: -30px;
+}
+.feelsDegree {
+  display: inline-block;
+  position: relative;
+  right: -5px;
+  top: -1px;
+}
+
+.units {
+  position: relative;
+  right: -10px;
+  top: -40px;
+}
+
+.picweather {
+  width: 200px;
+  display: inline-block;
+  position: relative;
+  top: -40px;
+}
+.column {
+  display: inline-block;
+  width: 500px;
+}
+
+.animdescription {
+  margin-right: 5mm;
+  display: inline-block;
+  position: relative;
+  right: -10px;
+  top: -50px;
+}
