@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Weather Project</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <video autoplay muted loop>
+      <source src="media/videos/Snow on a tree branch.mp4" type="video/mp4" />
+    </video>
+    <div class="container">
+      <div class="weatherapp">
+        <div class="citySearch">
+          <form>
+            <input type="text" placeholder="Enter City Name" id="enterCity" />
+            <input type="submit" value="Search" class="search" />
+            <button>Current Location</button>
+          </form>
+        </div>
+        <br />
+        <div class="updates">
+          <h1>Lisbon, Weather</h1>
+          <p id="updatesText">Updated on Thu./Jul 1, 8:25 am</p>
+        </div>
+        <div class="infocontent">
+          <span class="tempUnits" id="temperature">
+            <h2>27</h2>
+            <span class="units">
+              <a href="#" id="celsius">ºC </a>|
+              <a href="#" id="fahrenheit">ºF</a>
+            </span>
+          </span>
+          <span class="feels">feels like</span>
+          <div class="feelsDegree" id="feelsLike">27º</div>
+          <div class="picweather">
+            <img
+              src="media/images/animated/Céulimpo.svg"
+              alt="sunny"
+              id="picCurrentWeather"
+            />
+          </div>
+          <span class="animdescription" id="picsDescription"> Sunny </span>
+          <div class="column">
+            <div class="row justify-content-end">
+              <div class="col-6 col-sm-4"><strong>Máx</strong></div>
+              <div class="col-6 col-sm-2"><strong>Min</strong></div>
+
+              <div class="w-100 d-none d-md-block"></div>
+
+              <div class="col-5 col-sm-4" id="currentMax">24%</div>
+              <div class="col-5 col-sm-1" id="currentMin">18º</div>
+            </div>
+            <div class="row justify-content-end">
+              <div class="col-8 col-sm-6">
+                <strong>Precipitation Chance</strong>
+              </div>
+              <div class="col-6 col-sm-2"><strong>Humidity</strong></div>
+
+              <div class="w-100 d-none d-md-block"></div>
+
+              <div class="col-4 col-sm-4" id="precipitationChance">2%</div>
+              <div class="col-5 col-sm-1" id="currentHumidity">42%</div>
+            </div>
+            <div class="row justify-content-end">
+              <div class="col-6 col-sm-2"></div>
+              <div class="col-6 col-sm-2"><strong>UV</strong></div>
+
+              <div class="w-100 d-none d-md-block"></div>
+
+              <div class="col-8 col-sm-1"></div>
+              <div class="col-8 col-sm-1" id="uv">Very High</div>
+            </div>
+          </div>
+          <hr />
+          <div class="container2">
+            <div class="row align-items-center text-center">
+              <div class="col" id="1stcolumn"></div>
+              <div class="col font-weight-bold" id="1st">Today</div>
+              <div class="col font-weight-bold" id="2nd">Tomorrow</div>
+              <div class="col font-weight-bold" id="3rd">Sat</div>
+              <div class="col font-weight-bold" id="4th">Sun</div>
+              <div class="col font-weight-bold" id="5th">Mon</div>
+              <div class="col font-weight-bold" id="6th">Tue</div>
+              <div class="col font-weight-bold" id="7th">Wed</div>
+              <div class="w-100"></div>
+              <div class="col"></div>
+              <div class="col font-weight-bold">1Jul</div>
+              <div class="col font-weight-bold">2Jul</div>
+              <div class="col font-weight-bold">3Jul</div>
+              <div class="col font-weight-bold">4Jul</div>
+              <div class="col font-weight-bold">5Jul</div>
+              <div class="col font-weight-bold">6Jul</div>
+              <div class="col font-weight-bold">7Jul</div>
+              <div class="w-100"></div>
+              <div class="col">Máx ↑</div>
+              <div class="col">29º</div>
+              <div class="col">25º</div>
+              <div class="col">26º</div>
+              <div class="col">26º</div>
+              <div class="col">24º</div>
+              <div class="col">24º</div>
+              <div class="col">25º</div>
+              <div class="w-100"></div>
+              <div class="col">Min ↓</div>
+              <div class="col">17º</div>
+              <div class="col">18º</div>
+              <div class="col">17º</div>
+              <div class="col">17º</div>
+              <div class="col">17º</div>
+              <div class="col">15º</div>
+              <div class="col">15º</div>
+              <div class="w-100"></div>
+              <div class="col">08:00</div>
+              <div class="col"><img src="media/images/pics/sol.svg" /></div>
+              <div class="col"><img src="media/images/pics/nuvem.svg" /></div>
+              <div class="col">
+                <img src="media/images/pics/solumanuvem.svg" />
+              </div>
+              <div class="col">
+                <img src="media/images/pics/solumanuvem.svg" />
+              </div>
+              <div class="col">
+                <img src="media/images/pics/solumanuvem.svg" />
+              </div>
+              <div class="col"><img src="media/images/pics/nublado.svg" /></div>
+              <div class="col"><img src="media/images/pics/nublado.svg" /></div>
+              <div class="w-100"></div>
+              <div class="col">14:00</div>
+              <div class="col"><img src="media/images/pics/sol.svg" /></div>
+              <div class="col">
+                <img src="media/images/pics/soleduasnuvens.svg" />
+              </div>
+              <div class="col"><img src="media/images/pics/sol.svg" /></div>
+              <div class="col"><img src="media/images/pics/nublado.svg" /></div>
+              <div class="col">
+                <img src="media/images/pics/soleduasnuvens.svg" />
+              </div>
+              <div class="col"><img src="media/images/pics/nublado.svg" /></div>
+              <div class="col"><img src="media/images/pics/sol.svg" /></div>
+              <div class="w-100"></div>
+              <div class="col">20:00</div>
+              <div class="col"><img src="media/images/pics/nublado.svg" /></div>
+              <div class="col"><img src="media/images/pics/nublado.svg" /></div>
+              <div class="col"><img src="media/images/pics/sol.svg" /></div>
+              <div class="col"><img src="media/images/pics/nublado.svg" /></div>
+              <div class="col">
+                <img src="media/images/pics/soleduasnuvens.svg" />
+              </div>
+              <div class="col"><img src="media/images/pics/nublado.svg" /></div>
+              <div class="col"><img src="media/images/pics/sol.svg" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/app.js"></script>
+  </bod
