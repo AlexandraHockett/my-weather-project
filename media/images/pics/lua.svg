@@ -1,0 +1,23 @@
+<svg  height="100%" width="100%" version="1.1" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+ <metadata id="metadata7">image/svg+xml</metadata>
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <g stroke="null" id="svg_12">
+   <g stroke="null" transform="matrix(0.7887744146607898,0,0,0.8218870463178162,-372.40817359054904,-414.3942435192911) " id="svg_10">
+    <title stroke="null" transform="translate(-21.55123519897461,2.6351394653320312) translate(659.9999389648438,0) translate(0,659.9999389648438) ">background</title>
+    <rect stroke="null" x="637.448704" y="661.635078" width="302" height="302" id="svg_8" fill="none"/>
+   </g>
+   <g stroke="null" transform="matrix(0.7887744146607898,0,0,0.8218870463178162,-372.40817359054904,-414.3942435192911) " id="svg_11">
+    <title stroke="null" transform="translate(-21.55123519897461,2.6351394653320312) translate(659.9999389648438,0) translate(0,659.9999389648438) ">Layer 1</title>
+    <g stroke="null" id="svg_6" transform="rotate(15 788.4487304687494,811.1350708007814) ">
+     <path stroke="null" d="m855.082624,856.654948c-63.19576,0 -114.39011,-48.85542 -114.39011,-109.09786c0,-19.83897 5.96983,-38.18684 15.67915,-54.20265c-52.67631,14.49173 -91.41972,60.27071 -91.41972,115.16356c0,66.4801 56.50224,120.39773 126.21123,120.39773c57.5569,0 105.58726,-36.97841 120.7823,-87.18595c-16.8252,9.22929 -36.06105,14.92517 -56.86285,14.92517z" fill="#4c4c4c" id="svg_7"/>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>
